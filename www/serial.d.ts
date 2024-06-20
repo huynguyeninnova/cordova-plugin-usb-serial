@@ -14,17 +14,8 @@ export interface SerialOpenOptions {
     rts?: boolean;
     sleepOnPause?: boolean;
 }
-/**
- * This callback is displayed as a global member.
- * @callback SuccessCallback
- */
-/**
- * This callback is displayed as a global member.
- * @callback ErrorCallback
- * @param {any} e Error
- */
 
-export declare class SerialOriginal extends IonicNativePlugin {
+export declare class Serial extends IonicNativePlugin {
     /**
      * Request permission to connect to a serial device
      * @param {SerialPermissionOptions} [options] Options used to request serial permissions for an unknown device
@@ -81,6 +72,13 @@ export declare class SerialOriginal extends IonicNativePlugin {
      * @return {void} Returns a promise that resolves when the serial connection is closed
      */
     close(successCallback: Function, errorCallback: Function): void;
+    /**
+     * This callback is displayed as a global member.
+     * @callback SuccessCallback
+     */
+    /**
+     * This callback is displayed as a global member.
+     * @callback ErrorCallback
+     * @param {any} e Error
+     */
 }
-
-export declare const Serial: SerialOriginal;
