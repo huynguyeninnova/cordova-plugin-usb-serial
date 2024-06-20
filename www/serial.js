@@ -1,4 +1,4 @@
-const serial = {
+const Serial = {
   requestPermission: function (opts) {
     return new Promise((resolve, reject) => {
       cordova.exec(
@@ -77,4 +77,4 @@ const serial = {
     });
   },
 };
-module.exports = serial;
+module.exports = Serial;
