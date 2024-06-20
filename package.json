@@ -1,16 +1,16 @@
 {
-  "name": "@red-mobile/cordova-plugin-usb-serial",
+  "name": "cordova-plugin-usb-serial",
   "version": "2.0.0",
   "description": "Cordova plugin to communicate with the android USB serial port",
   "cordova": {
-    "id": "@red-mobile/cordova-plugin-usb-serial",
+    "id": "cordova-plugin-usb-serial",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/okhiroyuki/cordova-plugin-usb-serial.git"
+    "url": "git+https://github.com/huynguyeninnova/cordova-plugin-usb-serial.git"
   },
   "keywords": [
     "serial",
@@ -31,9 +31,9 @@
   "author": "Hiroyuki Okada",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/okhiroyuki/cordova-plugin-usb-serial/issues"
+    "url": "https://github.com/huynguyeninnova/cordova-plugin-usb-serial/issues"
   },
-  "homepage": "https://github.com/okhiroyuki/cordova-plugin-usb-serial#readme",
+  "homepage": "https://github.com/huynguyeninnova/cordova-plugin-usb-serial#readme",
   "devDependencies": {
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
