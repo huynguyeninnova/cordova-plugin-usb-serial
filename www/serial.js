@@ -1,80 +1,48 @@
-const Serial = {
-  requestPermission: function (opts) {
-    return new Promise((resolve, reject) => {
-      cordova.exec(
-        (r) => resolve(r),
-        (e) => reject(e),
-        "Serial",
-        "requestPermission",
-        [{ opts: opts }]
-      );
-    });
+const serial = {
+  requestPermission: function (opts, successCallback, errorCallback) {
+    if (typeof opts === "function") {
+      //user did not pass opts
+      errorCallback = successCallback;
+      successCallback = opts;
+      opts = {};
+    }
+    cordova.exec(
+      successCallback,
+      errorCallback,
+      "Serial",
+      "requestPermission",
+      [{ opts: opts }],
+    );
   },
-  open: function (opts) {
-    return new Promise((resolve, reject) => {
-      cordova.exec(
-        (r) => resolve(r),
-        (e) => reject(e),
-        "Serial",
-        "openSerial",
-        [{ opts: opts }]
-      );
-    });
+  open: function (opts, successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "Serial", "openSerial", [
+      { opts: opts },
+    ]);
   },
-  write: function (data) {
-    return new Promise((resolve, reject) => {
-      cordova.exec(
-        (r) => resolve(r),
-        (e) => reject(e),
-        "Serial",
-        "writeSerial",
-        [{ data: data }]
-      );
-    });
+  write: function (data, successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "Serial", "writeSerial", [
+      { data: data },
+    ]);
   },
-  writeHex: function (hexString) {
-    return new Promise((resolve, reject) => {
-      cordova.exec(
-        (r) => resolve(r),
-        (e) => reject(e),
-        "Serial",
-        "writeSerialHex",
-        [{ data: hexString }]
-      );
-    });
+  writeHex: function (hexString, successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "Serial", "writeSerialHex", [
+      { data: hexString },
+    ]);
   },
-  read: function () {
-    return new Promise((resolve, reject) => {
-      cordova.exec(
-        (r) => resolve(r),
-        (e) => reject(e),
-        "Serial",
-        "readSerial",
-        []
-      );
-    });
+  read: function (successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "Serial", "readSerial", []);
   },
-  close: function () {
-    return new Promise((resolve, reject) => {
-      cordova.exec(
-        (r) => resolve(r),
-        (e) => reject(e),
-        "Serial",
-        "closeSerial",
-        []
-      );
-    });
+  close: function (successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "Serial", "closeSerial", []);
   },
-  registerReadCallback: function () {
-    return new Promise((resolve, reject) => {
-      cordova.exec(
-        (r) => resolve(r),
-        (e) => reject(e),
-        "Serial",
-        "registerReadCallback",
-        []
-      );
-    });
+  registerReadCallback: function (successCallback, errorCallback) {
+    cordova.exec(
+      successCallback,
+      errorCallback,
+      "Serial",
+      "registerReadCallback",
+      [],
+    );
   },
 };
-module.exports = Serial;
+module.exports = serial;

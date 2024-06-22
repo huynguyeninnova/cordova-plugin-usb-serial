@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-usb-serial",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Cordova plugin to communicate with the android USB serial port",
   "cordova": {
     "id": "cordova-plugin-usb-serial",
@@ -28,7 +28,7 @@
   "engines": {
     "cordova": ">=10.0.0"
   },
-  "author": "Hiroyuki Okada",
+  "author": "Huy Nguyen Thanh",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/huynguyeninnova/cordova-plugin-usb-serial/issues"
